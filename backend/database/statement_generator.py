@@ -14,10 +14,10 @@ packages = []
 '''
 CREATE TABLE client (
     id UUID NOT NULL PRIMARY KEY,
-    first_name varchar(50) NOT NULL,
-    last_name varchar(50) NOT NULL,
-    email varchar(50) NOT NULL,
-    role varchar(100),
+    first_name text NOT NULL,
+    last_name text NOT NULL,
+    email text NOT NULL,
+    role text,
     location point);
 '''
 with open("insert_clients.sql", "w") as out:
@@ -37,15 +37,15 @@ with open("insert_clients.sql", "w") as out:
 '''
 CREATE TABLE photographer (
     id UUID NOT NULL PRIMARY KEY,
-    first_name varchar(50) NOT NULL,
-    last_name varchar(50) NOT NULL,
-    description varchar(300),
-    email varchar(50) NOT NULL,
-    school varchar(50),
-    phone_number varchar(25),
-    instagram varchar(25),
+    first_name text NOT NULL,
+    last_name text NOT NULL,
+    description text,
+    email text NOT NULL,
+    school text,
+    phone_number text,
+    instagram text,
     location point,
-    s3_portfolio_uri varchar(100));
+    s3_portfolio_uri text);
 '''
 with open("insert_photographers.sql", "w") as out:
     for _ in range(50):
@@ -88,7 +88,7 @@ CREATE TABLE package (
     payment_type payment_enum NOT NULL,
     rate money NOT NULL,
     editing boolean NOT NULL,
-    additional_info varchar(100));
+    additional_info text);
 '''
 with open("insert_package.sql", "w") as out:
     out.writelines(packages)
