@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		960DFB492798C6F800DE9E75 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DFB482798C6F800DE9E75 /* Home.swift */; };
+		960DFB4B2798C71900DE9E75 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DFB4A2798C71900DE9E75 /* MapView.swift */; };
+		960DFB4D2798C7AC00DE9E75 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DFB4C2798C7AC00DE9E75 /* MapViewModel.swift */; };
 		9694B8E12797CFF5006237AD /* PicMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694B8E02797CFF5006237AD /* PicMeApp.swift */; };
 		9694B8E32797CFF5006237AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694B8E22797CFF5006237AD /* ContentView.swift */; };
 		9694B8E52797CFF7006237AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9694B8E42797CFF7006237AD /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		960DFB482798C6F800DE9E75 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		960DFB4A2798C71900DE9E75 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		960DFB4C2798C7AC00DE9E75 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		9694B8DD2797CFF5006237AD /* PicMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9694B8E02797CFF5006237AD /* PicMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicMeApp.swift; sourceTree = "<group>"; };
 		9694B8E22797CFF5006237AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +38,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		960DFB462798C6CF00DE9E75 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				960DFB482798C6F800DE9E75 /* Home.swift */,
+				960DFB4A2798C71900DE9E75 /* MapView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		960DFB472798C6D800DE9E75 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				960DFB4C2798C7AC00DE9E75 /* MapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		9694B8D42797CFF4006237AD = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +74,8 @@
 		9694B8DF2797CFF5006237AD /* PicMe */ = {
 			isa = PBXGroup;
 			children = (
+				960DFB472798C6D800DE9E75 /* ViewModel */,
+				960DFB462798C6CF00DE9E75 /* View */,
 				9694B8E02797CFF5006237AD /* PicMeApp.swift */,
 				9694B8E22797CFF5006237AD /* ContentView.swift */,
 				9694B8E42797CFF7006237AD /* Assets.xcassets */,
@@ -138,6 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9694B8E32797CFF5006237AD /* ContentView.swift in Sources */,
+				960DFB4D2798C7AC00DE9E75 /* MapViewModel.swift in Sources */,
+				960DFB4B2798C71900DE9E75 /* MapView.swift in Sources */,
+				960DFB492798C6F800DE9E75 /* Home.swift in Sources */,
 				9694B8E12797CFF5006237AD /* PicMeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +299,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PicMe/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app need your location to show photographers near you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +328,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PicMe/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app need your location to show photographers near you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
