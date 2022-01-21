@@ -14,6 +14,7 @@
 		9694B8E32797CFF5006237AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694B8E22797CFF5006237AD /* ContentView.swift */; };
 		9694B8E52797CFF7006237AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9694B8E42797CFF7006237AD /* Assets.xcassets */; };
 		9694B8E82797CFF7006237AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9694B8E72797CFF7006237AD /* Preview Assets.xcassets */; };
+		96F6B039279A6A050063D472 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F6B038279A6A050063D472 /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		9694B8E22797CFF5006237AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9694B8E42797CFF7006237AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9694B8E72797CFF7006237AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		96F6B038279A6A050063D472 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		9694B8DF2797CFF5006237AD /* PicMe */ = {
 			isa = PBXGroup;
 			children = (
+				96F6B037279A69F90063D472 /* Model */,
 				960DFB472798C6D800DE9E75 /* ViewModel */,
 				960DFB462798C6CF00DE9E75 /* View */,
 				9694B8E02797CFF5006237AD /* PicMeApp.swift */,
@@ -90,6 +93,14 @@
 				9694B8E72797CFF7006237AD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		96F6B037279A69F90063D472 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96F6B038279A6A050063D472 /* Place.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +176,7 @@
 				9694B8E32797CFF5006237AD /* ContentView.swift in Sources */,
 				960DFB4D2798C7AC00DE9E75 /* MapViewModel.swift in Sources */,
 				960DFB4B2798C71900DE9E75 /* MapView.swift in Sources */,
+				96F6B039279A6A050063D472 /* Place.swift in Sources */,
 				960DFB492798C6F800DE9E75 /* Home.swift in Sources */,
 				9694B8E12797CFF5006237AD /* PicMeApp.swift in Sources */,
 			);
@@ -297,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PicMe/Preview Content\"";
+				DEVELOPMENT_TEAM = C7YJS33FNQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app need your location to show photographers near you.";
@@ -310,7 +323,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.picme.PicMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.picmeteam.PicMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -326,6 +339,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PicMe/Preview Content\"";
+				DEVELOPMENT_TEAM = C7YJS33FNQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app need your location to show photographers near you.";
@@ -339,7 +353,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.picme.PicMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.picmeteam.PicMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

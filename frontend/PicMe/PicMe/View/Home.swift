@@ -18,6 +18,39 @@ struct Home: View {
             //MapView
             MapView().environmentObject(mapData)
                 .ignoresSafeArea(.all, edges: .all)
+            VStack{
+                VStack(spacing: 0){
+                    HStack {
+                        Image(systemName: "magnifyingglass").foregroundColor(.gray)
+                        TextField("Search", text: $mapData.searchText).colorScheme(.light)
+                    }.padding(.vertical,10)
+                        .padding(.horizontal)
+                        .background(Color.white)
+                    
+                    if !mapData.places.isEmpty && mapData.searchText != "" {
+                        ScrollView {
+                            VStack(spacing: 15) {
+                                ForEach(mapData.places) {place in
+                                    HStack{
+                                        Image(systemName: "location.fill").foregroundColor(.black).padding(.leading)
+                                        Text(place.place.name ?? "")
+                                        .foregroundColor(.black)
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .padding(.leading)
+                                        .onTapGesture{
+                                            mapData.selectPlace(place: place)
+                                        }
+                                    }
+                                    Divider()
+                                }
+                            }.padding(.top)
+                            
+                        }.background(Color.white)
+                    }
+                }.padding()
+                Spacer()
+
+            }
         }.onAppear(perform: {
             locationManager.delegate = mapData
             locationManager.requestWhenInUseAuthorization()
@@ -30,6 +63,18 @@ struct Home: View {
                 UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
             }))
         })
+        .onChange(of: mapData.searchText, perform: {value in
+            let delay = 0.2
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                if value == mapData.searchText {
+                    //Search
+                    self.mapData.searchQuery()
+                }
+            }
+            
+        })
+            
     }
 }
 
