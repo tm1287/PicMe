@@ -30,7 +30,7 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var mapType: MKMapType = .standard
     
     @Published var searchText = ""
-    
+        
     @Published var places: [Place] = []
         
     func sendRequest(_ url: String, parameters: [String: String], completion: @escaping ([String: Any]?, Error?) -> Void) {
@@ -181,9 +181,6 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         //Query backend for nearby photographers
         //Modify photographer state
         fetchNearbyPhotographers(coordinate: coordinate)
-        
-        mapView.removeAnnotations(mapView.annotations)
-        mapView.addAnnotation(pointAnnotation)
         
         let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: 10000, longitudinalMeters: 10000)
         mapView.setRegion(coordinateRegion, animated: true)

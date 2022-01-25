@@ -12,6 +12,9 @@ struct Home: View {
     @StateObject var mapData = MapViewModel()
     
     @State var locationManager = CLLocationManager()
+
+    @FocusState private var emailFieldIsFocused: Bool
+
     
     var body: some View {
         ZStack {
@@ -22,7 +25,7 @@ struct Home: View {
                 VStack(spacing: 0){
                     HStack {
                         Image(systemName: "magnifyingglass").foregroundColor(.gray)
-                        TextField("Search", text: $mapData.searchText).colorScheme(.light)
+                        TextField("Search", text: $mapData.searchText).colorScheme(.light).focused($emailFieldIsFocused)
                     }.padding(.vertical,10)
                         .padding(.horizontal)
                         .background(Color.white)
@@ -37,9 +40,9 @@ struct Home: View {
                                         .foregroundColor(.black)
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .padding(.leading)
-                                        .onTapGesture{
-                                            mapData.selectPlace(place: place)
-                                        }
+                                    }.onTapGesture {
+                                        emailFieldIsFocused = false
+                                        mapData.selectPlace(place: place)
                                     }
                                     Divider()
                                 }
