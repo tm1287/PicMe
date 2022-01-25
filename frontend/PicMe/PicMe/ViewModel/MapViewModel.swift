@@ -18,7 +18,8 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     struct PhotographerPin: Codable {
         var latitude: Double
         var longitude: Double
-        var name: String
+        var first_name: String
+        var last_name: String
     }
     
     @Published var mapView = MKMapView()
@@ -90,7 +91,7 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
                     res.photographers.forEach { photographer in
                         let photographerAnnotation = MKPointAnnotation()
                         photographerAnnotation.coordinate = CLLocationCoordinate2D(latitude: photographer.latitude, longitude: photographer.longitude)
-                        photographerAnnotation.title = photographer.name
+                        photographerAnnotation.title = photographer.first_name + " " + photographer.last_name
                         
                         self.mapView.addAnnotation(photographerAnnotation)
 
