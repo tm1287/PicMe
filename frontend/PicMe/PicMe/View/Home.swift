@@ -14,7 +14,7 @@ struct Home: View {
     @State var locationManager = CLLocationManager()
     
     var body: some View {
-        ZStack{
+        ZStack {
             //MapView
             MapView().environmentObject(mapData)
                 .ignoresSafeArea(.all, edges: .all)
@@ -64,7 +64,7 @@ struct Home: View {
             }))
         })
         .onChange(of: mapData.searchText, perform: {value in
-            let delay = 0.2
+            let delay = 0.1
             
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                 if value == mapData.searchText {
