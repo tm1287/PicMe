@@ -96,10 +96,6 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
                         self.mapView.addAnnotation(photographerAnnotation)
 
                     }
-                    
-                    
-
-
                 } catch {
                     print(error)
                 }

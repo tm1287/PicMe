@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreLocation
+import Drawer
 
 struct Home: View {
     @StateObject var mapData = MapViewModel()
@@ -25,7 +26,10 @@ struct Home: View {
                 VStack(spacing: 0){
                     HStack {
                         Image(systemName: "magnifyingglass").foregroundColor(.gray)
-                        TextField("Search", text: $mapData.searchText).colorScheme(.light).focused($emailFieldIsFocused)
+                        TextField("Search", text: $mapData.searchText)
+                            .colorScheme(.light)
+                            .focused($emailFieldIsFocused)
+                            
                     }.padding(.vertical,10)
                         .padding(.horizontal)
                         .background(Color.white)
@@ -52,8 +56,41 @@ struct Home: View {
                     }
                 }.padding()
                 Spacer()
-
             }
+            Drawer {
+                ZStack {
+                    
+                    BlurredView(style: .systemThinMaterial)
+                    VStack{
+                        Capsule()
+                            .frame(width: 100, height: 7)
+                            .padding(.top, 7)
+                        
+                        ScrollView {
+                            VStack() {
+                                ForEach(0..<15) {_ in
+                                    ZStack{
+                                        RoundedRectangle(cornerRadius: 5).padding(.leading, 10).padding(.trailing, 10).foregroundColor(.blue)
+                                        VStack{
+                                            Text("Hello")
+                                            Text("Hello")
+                                            Text("Hello")
+                                            Text("Hello")
+                                        }
+                                    }.padding(.bottom, 50)
+                                    
+                                }
+                            }
+                        }.padding(.top, 25).padding(.leading, 50).padding(.trailing, 50)
+
+                    }
+                }
+            }.rest(at: .constant([100, 340, UIScreen.main.bounds.height - 150]))
+                .edgesIgnoringSafeArea(.vertical)
+            
+            
+            
+            
         }.onAppear(perform: {
             locationManager.delegate = mapData
             locationManager.requestWhenInUseAuthorization()

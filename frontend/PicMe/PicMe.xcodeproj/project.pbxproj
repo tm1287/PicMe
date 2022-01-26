@@ -14,6 +14,8 @@
 		9694B8E32797CFF5006237AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694B8E22797CFF5006237AD /* ContentView.swift */; };
 		9694B8E52797CFF7006237AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9694B8E42797CFF7006237AD /* Assets.xcassets */; };
 		9694B8E82797CFF7006237AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9694B8E72797CFF7006237AD /* Preview Assets.xcassets */; };
+		96977BF627A07AB500C21167 /* PhotographerDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96977BF527A07AB500C21167 /* PhotographerDrawer.swift */; };
+		96977BF927A0C42C00C21167 /* Drawer in Frameworks */ = {isa = PBXBuildFile; productRef = 96977BF827A0C42C00C21167 /* Drawer */; };
 		96F6B039279A6A050063D472 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F6B038279A6A050063D472 /* Place.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,7 @@
 		9694B8E22797CFF5006237AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9694B8E42797CFF7006237AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9694B8E72797CFF7006237AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		96977BF527A07AB500C21167 /* PhotographerDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotographerDrawer.swift; sourceTree = "<group>"; };
 		96F6B038279A6A050063D472 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -34,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96977BF927A0C42C00C21167 /* Drawer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +49,7 @@
 			children = (
 				960DFB482798C6F800DE9E75 /* Home.swift */,
 				960DFB4A2798C71900DE9E75 /* MapView.swift */,
+				96977BF527A07AB500C21167 /* PhotographerDrawer.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,6 +124,9 @@
 			dependencies = (
 			);
 			name = PicMe;
+			packageProductDependencies = (
+				96977BF827A0C42C00C21167 /* Drawer */,
+			);
 			productName = PicMe;
 			productReference = 9694B8DD2797CFF5006237AD /* PicMe.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +155,9 @@
 				Base,
 			);
 			mainGroup = 9694B8D42797CFF4006237AD;
+			packageReferences = (
+				96977BF727A0C42C00C21167 /* XCRemoteSwiftPackageReference "swiftui-drawer" */,
+			);
 			productRefGroup = 9694B8DE2797CFF5006237AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -179,6 +190,7 @@
 				96F6B039279A6A050063D472 /* Place.swift in Sources */,
 				960DFB492798C6F800DE9E75 /* Home.swift in Sources */,
 				9694B8E12797CFF5006237AD /* PicMeApp.swift in Sources */,
+				96977BF627A07AB500C21167 /* PhotographerDrawer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +395,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		96977BF727A0C42C00C21167 /* XCRemoteSwiftPackageReference "swiftui-drawer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maustinstar/swiftui-drawer";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		96977BF827A0C42C00C21167 /* Drawer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 96977BF727A0C42C00C21167 /* XCRemoteSwiftPackageReference "swiftui-drawer" */;
+			productName = Drawer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9694B8D52797CFF4006237AD /* Project object */;
 }
